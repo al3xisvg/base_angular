@@ -1,0 +1,16 @@
+@import 'src/styles/sizes.scss';
+
+// Mobile First
+.title {
+  color: #000000;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+// Desktop
+@media screen and (min-width: map-get($breakpoint, md)) {
+  .title {
+    font-size: 27px;
+  }
+}

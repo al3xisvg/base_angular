@@ -1,0 +1,20 @@
+@import 'src/styles/sizes.scss';
+
+// Mobile First
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// Desktop
+@media screen and (min-width: map-get($breakpoint, md)) {
+  .app-container {
+    max-width: 800px;
+  }
+}
