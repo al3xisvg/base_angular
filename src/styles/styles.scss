@@ -1,6 +1,8 @@
 
 @use '@angular/material' as mat;
 
+@import 'palette.scss';
+
 /* Begin - Fonts */
 $font: 'Objective';
 $fontConfig: mat.define-typography-config(
@@ -23,105 +25,6 @@ $fontConfig: mat.define-typography-config(
 @include mat.core($fontConfig);
 
 /* Begin - Colors */
-$primary-palette: (
-  50 : #e7efe4,
-  100 : #c3d6bb,
-  200 : #9cbb8e,
-  300 : #749f61,
-  400 : #568b3f,
-  500 : #38761d,
-  600 : #326e1a,
-  700 : #2b6315,
-  800 : #245911,
-  900 : #17460a,
-  A100 : #94ff7d,
-  A200 : #6aff4a,
-  A400 : #40ff17,
-  A700 : #2dfc00,
-  contrast: (
-    50 : #000000,
-    100 : #000000,
-    200 : #000000,
-    300 : #000000,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
-    800 : #ffffff,
-    900 : #ffffff,
-    A100 : #000000,
-    A200 : #000000,
-    A400 : #000000,
-    A700 : #000000,
-  )
-);
-
-$accent-palette: (
-  50 : #f1fcec,
-  100 : #dcf7d0,
-  200 : #c4f1b1,
-  300 : #aceb91,
-  400 : #9be77a,
-  500 : #89e362,
-  600 : #81e05a,
-  700 : #76dc50,
-  800 : #6cd846,
-  900 : #59d034,
-  A100 : #ffffff,
-  A200 : #eaffe5,
-  A400 : #c3ffb2,
-  A700 : #afff98,
-  contrast: (
-    50 : #000000,
-    100 : #000000,
-    200 : #000000,
-    300 : #000000,
-    400 : #000000,
-    500 : #000000,
-    600 : #000000,
-    700 : #000000,
-    800 : #000000,
-    900 : #000000,
-    A100 : #000000,
-    A200 : #000000,
-    A400 : #000000,
-    A700 : #000000,
-  )
-);
-
-$red-palette: (
-  50 : #f3e0e0,
-  100 : #e0b3b3,
-  200 : #cc8080,
-  300 : #b84d4d,
-  400 : #a82626,
-  500 : #990000,
-  600 : #910000,
-  700 : #860000,
-  800 : #7c0000,
-  900 : #6b0000,
-  A100 : #ff9a9a,
-  A200 : #ff6767,
-  A400 : #ff3434,
-  A700 : #ff1a1a,
-  contrast: (
-    50 : #000000,
-    100 : #000000,
-    200 : #000000,
-    300 : #ffffff,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
-    800 : #ffffff,
-    900 : #ffffff,
-    A100 : #000000,
-    A200 : #000000,
-    A400 : #ffffff,
-    A700 : #ffffff,
-  )
-);
-
 $base_angular-primary: mat.define-palette($primary-palette); // mat.$indigo-palette);
 $base_angular-accent: mat.define-palette($accent-palette); // (mat.$pink-palette, A200, A100, A400);
 $base_angular-warn: mat.define-palette($red-palette); // mat.$red-palette);
