@@ -1,29 +1,30 @@
 
 @use '@angular/material' as mat;
 
-/* BEGIN - FONTS */
+/* Begin - Fonts */
+$font: 'Objective';
 $fontConfig: mat.define-typography-config(
-  $display-4: mat.define-typography-level(112px, 112px, 300, 'Objective', -0.0134em),
-  $display-3: mat.define-typography-level(56px, 56px, 400, 'Objective', -0.0089em),
-  $display-2: mat.define-typography-level(45px, 48px, 400, 'Objective', 0em),
-  $display-1: mat.define-typography-level(34px, 40px, 400, 'Objective', 0.0074em),
-  $headline: mat.define-typography-level(24px, 32px, 400, 'Objective', 0em),
-  $title: mat.define-typography-level(20px, 32px, 500, 'Objective', 0.0075em),
-  $subheading-2: mat.define-typography-level(16px, 28px, 400, 'Objective', 0.0094em),
-  $subheading-1: mat.define-typography-level(15px, 24px, 500, 'Objective', 0.0067em),
-  $body-2: mat.define-typography-level(14px, 24px, 500, 'Objective', 0.0179em),
-  $body-1: mat.define-typography-level(14px, 20px, 400, 'Objective', 0.0179em),
-  $button: mat.define-typography-level(14px, 14px, 500, 'Objective', 0.0893em),
-  $caption: mat.define-typography-level(12px, 20px, 400, 'Objective', 0.0333em),
-  $input: mat.define-typography-level(inherit, 1.125, 400, 'Objective', 1.5px),
+  $display-4: mat.define-typography-level(112px, 112px, 300, $font, -0.0134em),
+  $display-3: mat.define-typography-level(56px, 56px, 400, $font, -0.0089em),
+  $display-2: mat.define-typography-level(45px, 48px, 400, $font, 0em),
+  $display-1: mat.define-typography-level(34px, 40px, 400, $font, 0.0074em),
+  $headline: mat.define-typography-level(24px, 32px, 400, $font, 0em),
+  $title: mat.define-typography-level(20px, 32px, 500, $font, 0.0075em),
+  $subheading-2: mat.define-typography-level(16px, 28px, 400, $font, 0.0094em),
+  $subheading-1: mat.define-typography-level(15px, 24px, 500, $font, 0.0067em),
+  $body-2: mat.define-typography-level(14px, 24px, 500, $font, 0.0179em),
+  $body-1: mat.define-typography-level(14px, 20px, 400, $font, 0.0179em),
+  $button: mat.define-typography-level(14px, 14px, 500, $font, 0.0893em),
+  $caption: mat.define-typography-level(12px, 20px, 400, $font, 0.0333em),
+  $input: mat.define-typography-level(inherit, 1.125, 400, $font, 1.5px),
 );
-/* END - FONTS */
+/* End - Fonts */
 
 @include mat.core($fontConfig);
 
+/* Begin - Colors */
 $base_angular-primary: mat.define-palette(mat.$indigo-palette);
 $base_angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
 $base_angular-warn: mat.define-palette(mat.$red-palette);
 
 $base_angular-theme: mat.define-light-theme((
@@ -33,6 +34,7 @@ $base_angular-theme: mat.define-light-theme((
     warn: $base_angular-warn,
   )
 ));
+/* End - Colors */
 
 @include mat.all-component-themes($base_angular-theme);
 
