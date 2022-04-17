@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## THEME
 
-- [ ] Go to: ***https://materialtheme.arcsine.dev***
+- [ ] Go to: ***http://mcg.mbitson.com/***
 
 ## RUNNIG
 
