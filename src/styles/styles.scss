@@ -1,25 +1,31 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
+/* BEGIN - FONTS */
+$fontConfig: mat.define-typography-config(
+  $display-4: mat.define-typography-level(112px, 112px, 300, 'Objective', -0.0134em),
+  $display-3: mat.define-typography-level(56px, 56px, 400, 'Objective', -0.0089em),
+  $display-2: mat.define-typography-level(45px, 48px, 400, 'Objective', 0em),
+  $display-1: mat.define-typography-level(34px, 40px, 400, 'Objective', 0.0074em),
+  $headline: mat.define-typography-level(24px, 32px, 400, 'Objective', 0em),
+  $title: mat.define-typography-level(20px, 32px, 500, 'Objective', 0.0075em),
+  $subheading-2: mat.define-typography-level(16px, 28px, 400, 'Objective', 0.0094em),
+  $subheading-1: mat.define-typography-level(15px, 24px, 500, 'Objective', 0.0067em),
+  $body-2: mat.define-typography-level(14px, 24px, 500, 'Objective', 0.0179em),
+  $body-1: mat.define-typography-level(14px, 20px, 400, 'Objective', 0.0179em),
+  $button: mat.define-typography-level(14px, 14px, 500, 'Objective', 0.0893em),
+  $caption: mat.define-typography-level(12px, 20px, 400, 'Objective', 0.0333em),
+  $input: mat.define-typography-level(inherit, 1.125, 400, 'Objective', 1.5px),
+);
+/* END - FONTS */
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
+@include mat.core($fontConfig);
+
 $base_angular-primary: mat.define-palette(mat.$indigo-palette);
 $base_angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// The warn palette is optional (defaults to red).
 $base_angular-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $base_angular-theme: mat.define-light-theme((
   color: (
     primary: $base_angular-primary,
@@ -28,12 +34,11 @@ $base_angular-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($base_angular-theme);
 
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; /*font-family: Roboto, "Helvetica Neue", sans-serif;*/ }
